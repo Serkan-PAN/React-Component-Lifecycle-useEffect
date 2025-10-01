@@ -1,15 +1,54 @@
-# Görev 1: Alışveriş Sitesi - Kategoriler
+# React FakeStore Kategori/Ürün Listeleme
 
-Çalıştığın yerde uzun zamandır kendini işlerine vermiştin. Ara vermeden çalıştığın için de sırtın ağrımaya başladı.
-Çalışma saatlerin de belli bir rutine oturmaya başlayınca tekrar spora başladın.
+Kategorilere göre ürün listeleyen basit bir React uygulaması. **Fake Store API** üzerinden kategoriler alınır ve seçilen kategoriye göre ürünler listelenir.
 
-Spor hocan kendine yeni bir iş kurmaya çalışıyor. Yurt dışı alışveriş sitelerindeki ürünler satacak. Senin de yazılımcı olduğunu öğrenince sana bazı sorular sordu. Sen de bunları nasıl yapabileceğini merak ettin.
+---
 
-Kendisi bir alışveriş sitesi yapacak. ürünlerini burada sergileyecek ve amazon gibi siteler üzerinden de satacak.
+## 📸 Ekran Görüntüleri
 
-ilk olarak ürün kategorilerini bir API'den almayı denemek istedin.
-Araştırdın ve bir Fake API buldun. Bunun üzerinde çalışarak bir şeyler yapabilirsin.
+> Buraya proje ekran görüntülerinizi ekleyebilirsiniz. Örnek:
 
-\`SideBar\` component'i yüklendiğinde https://fakestoreapi.com/products/categories adresinden kategorileri alıp, CategoryList component'ine prop olarak gönderelim ve [ekrandaki](https://i.ibb.co/W3CRd1F/s6d3-task1-design.png) gibi görünmesini sağlayalım.
+```
+![Electronics](src/ScreenShot/Electronics.jpeg)
+![Jewelery](src/ScreenShot/Jewelery.jpeg)
+![MenClothing](src/ScreenShot/MenClothing.jpeg)
+![WomenClothing](src/ScreenShot/WomenClothing.jpeg)
+```
 
-- İpucu: \`useEffect\` hook'unun 3 farklı kullanımı var. Bunlardan uygun olanı kullanabilirsin.
+---
+
+## ✨ Özellikler
+
+* Kategoriler API’den çekilir ve yan menüde gösterilir
+* Kategori seçildiğinde ürünler otomatik olarak güncellenir
+* Seçilen kategori başlıkta görüntülenir
+
+---
+
+## 🧱 Mimarî
+
+```
+App
+├── Header
+├── SideBar (kategori seçimi)
+├── Products (ürün listesi)
+└── Footer
+```
+
+* **App**: `category` state’ini tutar.
+* **SideBar**: Kategorileri API’den alır, seçimi App’e bildirir.
+* **Products**: Seçilen kategoriye göre ürünleri API’den çeker.
+
+---
+
+
+
+## 🔌 API
+
+* **Kategoriler**: `GET https://fakestoreapi.com/products/categories`
+* **Ürünler**: `GET https://fakestoreapi.com/products/category/:category`
+
+---
+
+
+Bu README, projeyi hızlıca anlamak ve kullanmak için özet bilgi sağlar. 🎉
