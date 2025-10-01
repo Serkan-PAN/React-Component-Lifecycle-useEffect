@@ -6,12 +6,16 @@ Kategorilere göre ürün listeleyen basit bir React uygulaması. **Fake Store A
 
 ## 📸 Ekran Görüntüleri
 
-> Buraya proje ekran görüntülerinizi ekleyebilirsiniz. Örnek:
-
-
+## ✨ Electronics Kategorisi
 ![Electronics](src/ScreenShot/Electronics.jpeg)
+
+## ✨ Jewelery Kategorisi
 ![Jewelery](src/ScreenShot/Jewelery.jpeg)
+
+## ✨ MenClothing Kategorisi
 ![MenClothing](src/ScreenShot/MenClothing.jpeg)
+
+## ✨ WomenClothing Kategorisi
 ![WomenClothing](src/ScreenShot/WomenClothing.jpeg)
 
 
